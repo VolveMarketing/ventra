@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato & Triagem | Ventra Estúdio de Design for Business</title>
+    <meta name="description" content="Inicie seu projeto com a Ventra. Atendimento consultivo para Agências, Empresas e Projetos Sob Demanda.">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Ventra</a>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Soluções</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+            <div class="header-action">
+                <a href="contato.html" class="btn btn-outline">Falar com Especialista</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Split Screen Contact -->
+    <section class="split-screen split-contact">
+        <!-- Coluna Esquerda -->
+        <div class="col-left anim-fade-up">
+            <span class="badge-pill">VAMOS CONVERSAR</span>
+            <h1 class="title-hero" style="font-size: clamp(2.2rem, 4.5vw, 3.8rem); margin-bottom: var(--space-md); line-height: 1.15;">Todo projeto começa com uma conversa de <span class="text-accent">negócio</span>.</h1>
+            <p class="text-lead" style="font-size: 1.1rem; line-height: 1.6;">Não estamos aqui apenas para desenhar. Estamos aqui para entender onde sua empresa está perdendo valor e traduzir sua real capacidade em uma marca que vende, cresce e sustenta preços melhores.</p>
+            
+            <div class="contact-info" style="margin-top: var(--space-lg); border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+                <p><strong>E-mail:</strong> <a href="mailto:contato@ventra.com.br" style="color: var(--color-accent);">contato@ventra.com.br</a></p>
+                <p><strong>WhatsApp Comercial:</strong> <a href="https://wa.me/5511999999999" target="_blank" style="color: var(--color-accent);">+55 (11) 99999-9999</a></p>
+                <p><strong>Atendimento:</strong> Seg a Sex, das 09h às 18h</p>
+            </div>
+        </div>
+
+        <!-- Coluna Direita (Formulário Qualificado com CTA Falar com Especialista) -->
+        <div class="col-right anim-fade-up">
+            <form id="contactForm">
+                
+                <div class="form-group">
+                    <label for="name">Qual é o seu nome ou da sua empresa?</label>
+                    <input type="text" id="name" class="form-control" required placeholder="Ex: Carlos Silva / Silva Tech">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Qual é o seu melhor e-mail corporativo?</label>
+                    <input type="email" id="email" class="form-control" required placeholder="carlos@empresa.com.br">
+                </div>
+
+                <div class="form-group">
+                    <label>Qual o perfil do seu projeto? (Escolha a sua necessidade)</label>
+                    <div class="checkbox-group" style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                        <label class="checkbox-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="profile" value="Agência / Gestor (Parceria B2B)" required checked>
+                            <span><strong>Para Agências:</strong> Busco parceiro/braço criativo contínuo (B2B)</span>
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="profile" value="Dono de Empresa (Identidade Visual PME)">
+                            <span><strong>Para Empresas (PMEs):</strong> Quero criar ou reposicionar minha marca</span>
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="profile" value="Sob Demanda (Embalagens / Brandbook)">
+                            <span><strong>Sob Demanda:</strong> Projeto de embalagens, rótulos ou brandbook</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: var(--space-md);">
+                    <label for="challenge">Qual é o seu principal desafio hoje?</label>
+                    <textarea id="challenge" class="form-control" rows="3" required placeholder="Ex: Nosso produto é excelente, mas nossa marca parece amadora e não conseguimos justificar nosso preço..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; background-color: var(--color-accent); color: #000; border: none; font-size: 1rem; transition: transform var(--trans-fast);">
+                    Falar com Especialista
+                </button>
+                <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.5rem; text-align: center;">Você será redirecionado para nosso WhatsApp com sua solicitação pré-formatada.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer minimal for contact page -->
+    <footer class="footer" style="padding: var(--space-md) 0; border-top: 1px solid var(--color-border);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div class="copyright">
+                <p>&copy; 2026 Ventra Estúdio de Design. Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <a href="index.html" style="margin-right: 1.5rem; font-size: 0.9rem;">Home</a>
+                <a href="servicos.html" style="margin-right: 1.5rem; font-size: 0.9rem;">Soluções</a>
+                <a href="sobre.html" style="font-size: 0.9rem;">Sobre</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
