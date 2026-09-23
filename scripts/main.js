@@ -51,12 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Validar formulário antes de enviar
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+            
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const challenge = document.getElementById('challenge').value;
             
             // Get selected profile
-            let profile = '';
+            let profile = 'Não informado';
             const profileOptions = document.getElementsByName('profile');
             for (let i = 0; i < profileOptions.length; i++) {
                 if (profileOptions[i].checked) {

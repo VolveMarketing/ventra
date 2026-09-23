@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventra | Estúdio de Branding e Design for Business</title>
-    <meta name="description" content="Design com foco comercial. Criamos identidades visuais e estratégias de marca para empresas parecerem do seu tamanho real e venderem mais.">
+    <meta name="description"
+        content="Design com foco comercial. Criamos identidades visuais e estratégias de marca para empresas parecerem do seu tamanho real e venderem mais.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Ventra | Estúdio de Branding e Design for Business">
+    <meta property="og:description"
+        content="Design com foco comercial. Criamos identidades visuais e estratégias de marca para empresas parecerem do seu tamanho real e venderem mais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ventra.com.br">
+
     <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -19,6 +30,9 @@
             <nav class="nav">
                 <a href="index.html" class="active">Home</a>
                 <a href="servicos.html">Soluções</a>
+                <span class="text-accent"
+                    style="font-weight: 800; letter-spacing: 1.5px; margin: 0 1rem; color: var(--color-accent, #ff4500); text-transform: uppercase; font-size: 0.9rem;">Born
+                    to Create</span>
                 <a href="sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
             </nav>
@@ -29,32 +43,99 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content container anim-fade-up">
-            <span class="badge-pill">DESIGN FOR BUSINESS</span>
-            <h1 class="title-hero">Criamos marcas projetadas para <span class="text-accent">vender e crescer</span>.</h1>
-            <p class="text-lead">Combinamos pensamento comercial e design de alto nível para resolver a falta de percepção de valor. Ajudamos empresas a parecerem do tamanho que realmente são para justificarem seus preços, e agências a escalarem suas entregas.</p>
-            <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md);">
-                <a href="contato.html" class="btn btn-solid">Falar com Especialista</a>
-            </div>
-        </div>
+    <section class="hero"
+        style="height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <video autoplay muted loop playsinline aria-label="Apresentação em vídeo do estúdio Ventra"
+            title="Apresentação Ventra"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <!-- Substitua o src abaixo pelo caminho do seu vídeo -->
+            <source src="assets/video-placeholder.mp4" type="video/mp4">
+        </video>
+        <div class="hero-bg" style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); z-index: 0;"></div>
     </section>
 
     <!-- Stats Bar -->
     <section class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-item anim-fade-up">
-                <h3>+150</h3>
-                <p>Projetos Entregues</p>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem; font-weight: bold; line-height: 1.3;">
+                Fazemos com que sua marca tenha<br> mais valor aos olhos do cliente</h2>
+            <div class="stats-grid">
+                <div class="stat-item anim-fade-up">
+                    <h3>+87</h3>
+                    <p>Empresas Valorizadas</p>
+                </div>
+                <div class="stat-item anim-fade-up">
+                    <h3>+43</h3>
+                    <p>Projetos Entregues</p>
+                </div>
+                <div class="stat-item anim-fade-up">
+                    <h3>+4 Anos</h3>
+                    <p>Parcerias Duradouras</p>
+                </div>
             </div>
-            <div class="stat-item anim-fade-up">
-                <h3>Estratégia</h3>
-                <p>e Posicionamento</p>
-            </div>
-            <div class="stat-item anim-fade-up">
-                <h3>Design for Business</h3>
-                <p>Foco em Resultado Comercial</p>
+        </div>
+    </section>
+
+    <!-- Marcas que Cresceram -->
+    <section class="brands-section anim-fade-up" style="padding: 5rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3.5rem; font-size: 2rem; font-weight: bold;">Marcas que
+                cresceram com a gente</h2>
+
+            <style>
+                .logos-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 1.5rem;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+
+                .logo-placeholder {
+                    aspect-ratio: 2/1;
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px dashed rgba(255, 255, 255, 0.15);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: rgba(255, 255, 255, 0.3);
+                    font-size: 0.85rem;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    transition: all 0.3s ease;
+                }
+
+                .logo-placeholder:hover {
+                    background: rgba(255, 255, 255, 0.08);
+                    color: rgba(255, 255, 255, 0.6);
+                    border-color: rgba(255, 255, 255, 0.3);
+                }
+
+                @media (max-width: 768px) {
+                    .logos-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1rem;
+                    }
+                }
+            </style>
+
+            <div class="logos-grid">
+                <!-- 12 Logos (4x3 Grid) -->
+                <div class="logo-placeholder">LOGO 1</div>
+                <div class="logo-placeholder">LOGO 2</div>
+                <div class="logo-placeholder">LOGO 3</div>
+                <div class="logo-placeholder">LOGO 4</div>
+
+                <div class="logo-placeholder">LOGO 5</div>
+                <div class="logo-placeholder">LOGO 6</div>
+                <div class="logo-placeholder">LOGO 7</div>
+                <div class="logo-placeholder">LOGO 8</div>
+
+                <div class="logo-placeholder">LOGO 9</div>
+                <div class="logo-placeholder">LOGO 10</div>
+                <div class="logo-placeholder">LOGO 11</div>
+                <div class="logo-placeholder">LOGO 12</div>
             </div>
         </div>
     </section>
@@ -64,8 +145,10 @@
         <div class="container">
             <div class="text-center" style="text-align: center; max-width: 800px; margin: 0 auto var(--space-xl);">
                 <span class="tagline">COMO PODEMOS SOMAR</span>
-                <h2 class="title-section">Escolha o modelo ideal para o seu momento</h2>
-                <p class="text-lead" style="margin: var(--space-xs) auto 0;">Atuamos como braço criativo contínuo para agências, parceiro estratégico para empresas em crescimento ou no desenvolvimento pontual de embalagens e marcas.</p>
+                <h2 class="title-section">Vamos juntos posicionar a sua empresa</h2>
+                <p class="text-lead" style="margin: var(--space-xs) auto 0;">Atuamos como braço criativo contínuo para
+                    agências, parceiro estratégico para empresas em crescimento ou no desenvolvimento pontual de
+                    embalagens e marcas.</p>
             </div>
 
             <div class="tabs-cards-grid">
@@ -73,40 +156,163 @@
                 <a href="servicos.html#tab-1" class="tab-card-btn" style="text-decoration: none;">
                     <div class="tab-card-header">
                         <div class="tab-indicator">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
                         </div>
                         <span class="tab-badge">01 // B2B</span>
                     </div>
                     <h3 class="tab-card-title">Para Agências & Gestores</h3>
-                    <p class="tab-card-desc">Seu braço terceirizado de design. Identidades completas e criativos de tráfego com agilidade operacional para a sua carteira de clientes.</p>
-                    <span style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Ver Solução B2B →</span>
+                    <p class="tab-card-desc">Seu braço terceirizado de design. Identidades completas e criativos de
+                        tráfego com agilidade operacional para a sua carteira de clientes.</p>
+                    <span
+                        style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Ver
+                        Solução B2B →</span>
                 </a>
 
                 <!-- Card 2: PMEs / Empresas -->
                 <a href="servicos.html#tab-2" class="tab-card-btn" style="text-decoration: none;">
                     <div class="tab-card-header">
                         <div class="tab-indicator">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
                         </div>
                         <span class="tab-badge">02 // PMEs & Marcas</span>
                     </div>
                     <h3 class="tab-card-title">Para Empresas & PMEs</h3>
-                    <p class="tab-card-desc">Identidade visual e posicionamento de autoridade para empresas que precisam parecer do seu tamanho real e justificar seu valor.</p>
-                    <span style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Ver Soluções PME →</span>
+                    <p class="tab-card-desc">Identidade visual e posicionamento de autoridade para empresas que precisam
+                        parecer do seu tamanho real e justificar seu valor.</p>
+                    <span
+                        style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Ver
+                        Soluções PME →</span>
                 </a>
 
-                <!-- Card 3: Sob Demanda -->
-                <a href="servicos.html#tab-3" class="tab-card-btn" style="text-decoration: none;">
-                    <div class="tab-card-header">
-                        <div class="tab-indicator">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </div>
-                        <span class="tab-badge">03 // Projetos Especiais</span>
-                    </div>
-                    <h3 class="tab-card-title">Sob Demanda & Embalagens</h3>
-                    <p class="tab-card-desc">Projetos de Brandbook completo para expansão, design de embalagens para gôndola e fechamento técnico para gráficas.</p>
-                    <span style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Ver Sob Demanda →</span>
-                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee Section -->
+    <section class="marquee-section anim-fade-up" style="padding: 4rem 0; overflow: hidden;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.2rem; font-weight: bold;">Fazemos tudo que
+                pode ser visto</h2>
+        </div>
+
+        <style>
+            .marquee-wrapper {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+                padding: 1.5rem 0;
+                display: flex;
+            }
+
+            .marquee-wrapper::before,
+            .marquee-wrapper::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 150px;
+                height: 100%;
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            .marquee-wrapper::before {
+                left: 0;
+                background: linear-gradient(to right, var(--bg-color, #0a0a0a), transparent);
+            }
+
+            .marquee-wrapper::after {
+                right: 0;
+                background: linear-gradient(to left, var(--bg-color, #0a0a0a), transparent);
+            }
+
+            .marquee-track {
+                display: flex;
+                gap: 1.5rem;
+                animation: scrollMarquee 40s linear infinite;
+            }
+
+            .marquee-wrapper:hover .marquee-track {
+                animation-play-state: paused;
+            }
+
+            .marquee-item {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.7);
+                padding: 0.8rem 1.8rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 50px;
+                background: rgba(255, 255, 255, 0.03);
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                cursor: default;
+            }
+
+            .marquee-item:hover {
+                color: var(--color-accent, #fff);
+                border-color: var(--color-accent, rgba(255, 255, 255, 0.4));
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            @keyframes scrollMarquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-50% - 0.75rem));
+                }
+
+                /* -50% da track descontando metade do gap */
+            }
+
+            @media (max-width: 768px) {
+
+                .marquee-wrapper::before,
+                .marquee-wrapper::after {
+                    width: 50px;
+                }
+            }
+        </style>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <span class="marquee-item">Catálogos</span>
+                <span class="marquee-item">Embalagens</span>
+                <span class="marquee-item">Papelaria</span>
+                <span class="marquee-item">Materiais Gráficos</span>
+                <span class="marquee-item">Logotipos</span>
+                <span class="marquee-item">Identidades Visuais</span>
+                <span class="marquee-item">Branding</span>
+                <span class="marquee-item">Comunicação p/ Eventos</span>
+                <span class="marquee-item">Coleções de Estampas</span>
+                <span class="marquee-item">Uniformes</span>
+                <span class="marquee-item">Itens Personalizados</span>
+                <span class="marquee-item">Layout para Site</span>
+                <span class="marquee-item">Posts Redes Sociais</span>
+                <span class="marquee-item">Motion Design</span>
+
+                <!-- Cópia exata para o loop infinito perfeito -->
+                <span class="marquee-item">Catálogos</span>
+                <span class="marquee-item">Embalagens</span>
+                <span class="marquee-item">Papelaria</span>
+                <span class="marquee-item">Materiais Gráficos</span>
+                <span class="marquee-item">Logotipos</span>
+                <span class="marquee-item">Identidades Visuais</span>
+                <span class="marquee-item">Branding</span>
+                <span class="marquee-item">Comunicação p/ Eventos</span>
+                <span class="marquee-item">Coleções de Estampas</span>
+                <span class="marquee-item">Uniformes</span>
+                <span class="marquee-item">Itens Personalizados</span>
+                <span class="marquee-item">Layout para Site</span>
+                <span class="marquee-item">Posts Redes Sociais</span>
+                <span class="marquee-item">Motion Design</span>
             </div>
         </div>
     </section>
@@ -119,8 +325,13 @@
                 <h2 class="manifesto-title">Design que não vende<br>é apenas arte.</h2>
             </div>
             <div class="col anim-fade-up">
-                <p class="manifesto-text">Muitas empresas excelentes perdem vendas todos os dias simplesmente porque sua apresentação visual passa uma impressão amadora, parecendo muito menor do que sua capacidade real de entrega.</p>
-                <p class="manifesto-text">A Ventra nasceu para romper esse abismo. Não somos freelancers amadores e nem criativos presos a conceitos acadêmicos sem ligação com vendas. Temos método, processo corporativo e agilidade para construir sistemas visuais que geram respeito imediato e sustentam preços mais altos.</p>
+                <p class="manifesto-text">Muitas empresas excelentes perdem vendas todos os dias simplesmente porque sua
+                    apresentação visual passa uma impressão amadora, parecendo muito menor do que sua capacidade real de
+                    entrega.</p>
+                <p class="manifesto-text">A Ventra nasceu para romper esse abismo. Não somos freelancers amadores nem
+                    criativos presos a conceitos acadêmicos sem ligação com vendas. Temos método, processo corporativo e
+                    agilidade para construir sistemas visuais que geram respeito imediato e sustentam preços mais altos.
+                </p>
                 <div style="margin-top: 1.5rem;">
                     <a href="contato.html" class="btn btn-outline">Falar com Especialista</a>
                 </div>
@@ -131,25 +342,29 @@
     <!-- Processo em 4 Passos -->
     <section class="process-home">
         <div class="container">
-            <h2 class="title-section text-center anim-fade-up" style="text-align: center;">Nosso processo comercial: da decisão ao resultado.</h2>
-            <p class="text-lead text-center anim-fade-up" style="text-align: center; margin: 0 auto var(--space-lg); max-width: 700px;">Cada etapa existe para eliminar inseguranças e entregar uma marca pronta para gerar negócios.</p>
-            
+            <h2 class="title-section text-center anim-fade-up" style="text-align: center;">Nosso processo criativo: do
+                problema ao resultado.</h2>
+
             <div class="process-grid anim-fade-up">
                 <div class="process-step">
                     <h4>01. Problema</h4>
-                    <p>Mergulhamos no seu cenário comercial para entender por que sua marca atual não está justificando seu preço ou por que sua agência está travando na criação.</p>
+                    <p>Mergulhamos no seu cenário comercial e nos gargalos operacionais para entender exatamente qual o
+                        objetivo da sua demanda e o que precisa ser resolvido.</p>
                 </div>
                 <div class="process-step">
-                    <h4>02. Decisão</h4>
-                    <p>Definimos o posicionamento estratégico, o tom de voz e o diferencial competitivo antes de desenhar qualquer elemento visual.</p>
+                    <h4>02. Solução</h4>
+                    <p>Desenvolvemos um projeto criativo sob medida para a sua necessidade, unindo estética,
+                        funcionalidade técnica e foco no seu cliente final.</p>
                 </div>
                 <div class="process-step">
-                    <h4>03. Solução</h4>
-                    <p>Criamos um sistema visual completo (logo, tipografia, paleta e padrões) alinhado às expectativas e à psicologia do seu cliente final.</p>
+                    <h4>03. Decisão</h4>
+                    <p>Apresentamos caminhos estratégicos e estruturados, permitindo que você escolha com clareza a
+                        melhor direção visual para o seu negócio.</p>
                 </div>
                 <div class="process-step">
-                    <h4>04. Aplicação</h4>
-                    <p>Entregamos tudo pronto para o mundo real: arquivos fechados para gráfica, mockups de campanhas, manual prático e suporte de acompanhamento.</p>
+                    <h4>04. Resultado</h4>
+                    <p>Entregamos os arquivos finais com precisão técnica, prontos para gerar impacto no mundo real,
+                        acompanhados de todo o suporte de implementação.</p>
                 </div>
             </div>
         </div>
@@ -158,46 +373,58 @@
     <!-- Cases (Wireframe Dark Sem Fotos) -->
     <section class="cases-home">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-lg); flex-wrap: wrap; gap: var(--space-sm);">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-lg); flex-wrap: wrap; gap: var(--space-sm);">
                 <div>
                     <span class="tagline">PORTFÓLIO ESTRUTURAL</span>
                     <h2 class="title-section" style="margin-bottom: 0;">Marcas com personalidade e resultado.</h2>
                 </div>
                 <a href="contato.html" class="btn btn-outline">Falar com Especialista</a>
             </div>
-            
+
             <div class="cases-grid anim-fade-up">
-                <!-- Case 1 (Wireframe Slot - PME) -->
-                <div class="wireframe-slot aspect-wide" style="grid-column: span 2;">
-                    <span class="wireframe-tag">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                        SUGESTÃO VISUAL: CASE PME CORPORATIVO
-                    </span>
-                    <h4 class="wireframe-title">Aura Cosméticos // Identidade Corporativa & Packaging</h4>
-                    <p class="wireframe-desc">Foto em plano aberto com iluminação lateral suave, apresentando a linha de cosméticos institucionais com papelaria em relevo seco, paleta minimalista e frascos foscos com acabamento premium.</p>
-                    <span class="wireframe-dimension">WIREFRAME // 1200 x 514</span>
+                <!-- Case 1 (B2B) -->
+                <div class="case-card-text" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0;">TechFlow Solutions</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        <strong>O que fizemos:</strong> Criação de telas de dashboard analítico corporativo e pranchas de criativos em formato carrossel para anúncios patrocinados (Meta Ads).
+                    </p>
                 </div>
 
-                <!-- Case 2 (Wireframe Slot - Embalagem) -->
-                <div class="wireframe-slot aspect-card">
-                    <span class="wireframe-tag">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                        SUGESTÃO VISUAL: CASE EMBALAGEM PDV
-                    </span>
-                    <h4 class="wireframe-title">Café Reserva da Serra // Linha de Embalagens</h4>
-                    <p class="wireframe-desc">Renderização 3D de alta fidelidade mostrando embalagens stand-up pouch em fundo contrastante, destacando o verniz localizado e tipografia encorpada para gôndola.</p>
-                    <span class="wireframe-dimension">WIREFRAME // 800 x 500</span>
+                <!-- Case 2 (PME) -->
+                <div class="case-card-text" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0;">Aura Cosméticos</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        <strong>O que fizemos:</strong> Linha institucional de identidade corporativa com paleta sofisticada em tons terrosos, aplicações em papel couché fosco e design de embalagens.
+                    </p>
                 </div>
 
-                <!-- Case 3 (Wireframe Slot - B2B / Ads) -->
-                <div class="wireframe-slot aspect-card">
-                    <span class="wireframe-tag">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                        SUGESTÃO VISUAL: CASE B2B & CRIATIVOS
-                    </span>
-                    <h4 class="wireframe-title">TechFlow Solutions // Brand System & Campanhas</h4>
-                    <p class="wireframe-desc">Composição em perspectiva com mockups de laptop e smartphone exibindo o manual digital da marca e grids de anúncios para Meta Ads com alto contraste.</p>
-                    <span class="wireframe-dimension">WIREFRAME // 800 x 500</span>
+                <!-- Case 3 (B2B) -->
+                <div class="case-card-text" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0;">Apex Growth Partner</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        <strong>O que fizemos:</strong> Decks institucionais padronizados com infográficos de autoridade e apresentação comercial executiva para captação de grandes contas.
+                    </p>
+                </div>
+
+                <!-- Case 4 (PME) -->
+                <div class="case-card-text" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0;">Volve Arquitetura & Engenharia</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        <strong>O que fizemos:</strong> Naming e sistema visual corporativo com linhas limpas, tipografia sem serifa geométrica e aplicações completas em plantas e sinalização de obras.
+                    </p>
                 </div>
             </div>
         </div>
@@ -210,7 +437,7 @@
                 <h2>Pronto para transformar sua marca?</h2>
                 <a href="contato.html" class="btn btn-solid">Falar com Especialista</a>
             </div>
-            
+
             <div class="footer-bottom anim-fade-up">
                 <div class="footer-col">
                     <h5>Ventra</h5>
@@ -238,11 +465,11 @@
                     <ul>
                         <li><a href="servicos.html#tab-1">Para Agências (B2B)</a></li>
                         <li><a href="servicos.html#tab-2">Para Empresas (PMEs)</a></li>
-                        <li><a href="servicos.html#tab-3">Sob Demanda & Embalagens</a></li>
+
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-copyright anim-fade-up">
                 <p>&copy; 2026 Ventra Estúdio de Design. Todos os direitos reservados.</p>
             </div>
@@ -251,4 +478,5 @@
 
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
